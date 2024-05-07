@@ -1,0 +1,725 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --bg-color: #111111;
+    --second-bg-color: #151515;
+    --text-color: white;
+    --main-color: #A71B0F;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color) 
+    fontw 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 5% 10rem;
+}
+/* END OF CONTACT */
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-img {
+    border: 50%;
+}
+
+.home-img img {
+    position: relative;
+    top: 3rem;
+    width: 22vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 40px var(--main-color),
+                0 0 60px var(--main-color);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 1000px;
+}
+/* END OF HOME */
+
+/* SOCIALS */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 1rem 1rem 1.5rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.3)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+/* END OF SOCIALS */
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+/* END OF BUTTON */
+
+/* TEXT ANIMATION */
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: 'Computer Hardware Engineer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+/* END OF TEXT ANIMATION */
+
+/* KEYFRAMES */
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words {
+    0%,
+    20% {
+        content: 'Computer Hardware Engineer';
+    }
+    21%,
+    40% {
+        content: "IT";
+    }
+    41%,
+    60% {
+        content: "Successful Person";
+    }
+    61%,
+    80% {
+        content: "Billionaire";
+    }
+    81%,
+    100% {
+        content: "Civil Engineer";
+    }
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%, 
+    25%,
+    40%, 
+    45%, 
+    60%, 
+    65%, 
+    80%, 
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+/* END OF KEYFRAMES */
+
+/* ABOUT */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+    color: white;
+}
+
+.about h2 {
+    font-size: 7rem;
+}
+
+.about h2 span {
+    color: var(--main-color);
+    font-size: 7rem;
+}
+
+.about .chevron {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.about .chevron i {
+    padding-bottom: 1rem;
+}
+
+.about-img {
+    border-radius: 50%;
+}
+
+.about-img img {
+    position: relative;
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 50rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.about-content h3 {
+    font-size: 3rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.about-content .text-animation span::before {
+    content: 'Computer Hardware Engineer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.about-content .text-animation span::after {
+    content: "";
+    background-color: var(--second-bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--second-bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+/* WEBKIT */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+    width: 20px;
+}
+/* END OF ABOUT */
+
+/* HOBBIES */
+.skills {
+    background: var(--bg-color);
+    color: white;
+}
+
+.skills h2 {
+    margin-bottom: 5rem;
+    color: white;
+    font-size: 70px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.skills-box {
+    background-color: var(--main-color);
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.skills-box:hover {
+    background: white;
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+
+.skills-box .skills-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 100px;
+    justify-content: left;
+    align-items: left;
+    padding: 4.5em;
+}
+
+.skills-info h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.skills-info p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+/* END OF HOBBIES */
+
+/* RESUME */
+.resume {
+    background: var(--second-bg-color);
+    padding-left: 7rem;
+}
+
+.resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    color: var(--text-color);
+}
+
+.resume p {
+    padding-left: 5px;
+    font-size: 1.5rem;
+}
+  
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--text-color);
+    position: relative;
+}
+
+.resume h2 {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 70px;
+}
+  
+.resume .resume-item h4 {
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+  
+.resume .resume-item h5 {
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 4rem;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+    padding-left: 20px;
+}
+  
+.resume .resume-item ul li {
+    font-size: 15px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+  
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+}
+  
+.resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -11px;
+    top: 0;
+    background: #fff;
+    border: 2px solid var(--main-color);
+}
+/* END OF RESUME */
+
+/* CONTACT */
+.contact {
+    background-color: var(--bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 70px;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input, 
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+/* END OF CONTACT */
+
+/* FOOTER */
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: var(--second-bg-color);
+    padding-bottom: 10px;
+    padding-top: 20px;
+    min-height: 0%;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--main-color);
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-10px);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+/* END OF FOOTER */
+
+/* MEDIA */
+@media (max-width:1285px) {
+    html {
+        font-size: 55%;
+    }
+    .hobbies-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 5rem;
+    }
+}
+
+@media (max-width:991px) {
+    header{
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .hobbies {
+        padding-bottom: 7rem;
+    }
+    .resume {
+        padding: 5rem 6%;
+    }
+    .contact {
+        padding: 4rem 3%;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width:895px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        height: 35vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-bottom-left-radius: 1rem;
+        backdrop-filter: blur(30px);
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+    .home-content p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img {
+        width: 56vw;
+        margin-top: -2rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about-content {
+        margin: 0 2rem 4rem;
+    }
+    .about img {
+        width: 52vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .hobbies h2 {
+        margin-bottom: 3rem;
+    }
+    .hobbies-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* END OF MEDIA */
