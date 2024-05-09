@@ -6,7 +6,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 :root {
@@ -627,11 +627,9 @@ span {
 
 /* MEDIA */
 @media (max-width:1285px) {
-    * {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
     html {
         font-size: 55%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     .skills-container {
         padding-bottom: 7rem;
@@ -641,7 +639,7 @@ span {
 }
 
 @media (max-width:991px) {
-    * {
+    html {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     header{
@@ -665,8 +663,8 @@ span {
 }
 
 @media (max-width:895px) {
-    * {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    html {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
     }
     #menu-icon {
         display: block;
