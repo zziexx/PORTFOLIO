@@ -627,6 +627,9 @@ span {
 
 /* MEDIA */
 @media (max-width:1285px) {
+    * {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     html {
         font-size: 55%;
     }
@@ -638,6 +641,9 @@ span {
 }
 
 @media (max-width:991px) {
+    * {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     header{
         padding: 2rem 3%;
     }
@@ -659,6 +665,9 @@ span {
 }
 
 @media (max-width:895px) {
+    * {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     #menu-icon {
         display: block;
     }
