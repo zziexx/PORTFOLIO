@@ -526,6 +526,12 @@ span {
     cursor: pointer;
 }
 
+.portfolio h2 {
+    margin-bottom: 3rem;
+    color: white;
+    font-size: 70px;
+}
+
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -706,6 +712,10 @@ div.main img{
         grid-template-columns: repeat(2,1fr);
         margin: 0 5rem;
     }
+
+    .portfolio-container img {
+        min-width: 30vw;
+    }
 }
 
 @media (max-width:991px) {
@@ -798,7 +808,6 @@ div.main img{
     .skills-container {
         grid-template-columns: repeat(1,1fr); 
     }
-
     .portfolio h4 {
         font-size: 30px;
     }
@@ -811,6 +820,7 @@ div.main img{
         align-items: center;
         align-content: center;
         align-self: center;
+        min-width: 40vw;
     }
 }
 /* END OF MEDIA */
