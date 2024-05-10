@@ -527,7 +527,7 @@ span {
 }
 
 .portfolio h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: white;
     font-size: 70px;
 }
@@ -733,6 +733,9 @@ div.main img{
     }
     .resume {
         padding: 5rem 6%;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
     }
     .contact {
         padding: 4rem 3%;
